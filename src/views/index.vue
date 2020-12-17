@@ -5,9 +5,9 @@
     <i class="iconfont icon-angle-right next-page" @click="switchPage('+')"
       :class="{ '_hidden': currentPage >= NAV_ITEMS[NAV_ITEMS.length-1].id }"></i>
     <transition :name="transitionName">
-      <keep-alive>
-        <router-view />
-      </keep-alive>
+      <router-view />
+      <!-- <keep-alive>
+      </keep-alive> -->
     </transition>
   </article>
 </template>

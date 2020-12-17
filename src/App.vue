@@ -47,19 +47,19 @@ export default class App extends Vue {
     opacity: 0;
   }
   .slide-top-enter {
-    transform: translateY(30vh);
+    transform: translateY(20vh);
     transition-timing-function: ease-in;
   }
   .slide-top-leave-to {
-    transform: translateY(-25vh);
+    transform: translateY(-10vh);
     transition-timing-function: ease-out;
   }
   .slide-bottom-enter {
-    transform: translateY(-30vh);
+    transform: translateY(-20vh);
     transition-timing-function: ease-in;
   }
   .slide-bottom-leave-to {
-    transform: translateY(25vh);
+    transform: translateY(10vh);
     transition-timing-function: ease-out;
   }
 }

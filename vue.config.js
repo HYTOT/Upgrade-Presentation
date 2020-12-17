@@ -3,7 +3,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const OptimizeCss = require('optimize-css-assets-webpack-plugin')
 
-const isProduction = true
+const isProduction = !true
 const openProxy = !true
 const proxyBase = ['http://res.uxkb.cn', 'http://192.168.1.4'][1]
 
