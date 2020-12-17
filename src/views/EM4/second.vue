@@ -15,6 +15,6 @@ export default class Second extends Vue {
 
 <style lang="scss" scoped>
 .second {
-  background: wheat;
+  
 }
 </style>

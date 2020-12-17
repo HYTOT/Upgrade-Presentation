@@ -16,28 +16,28 @@ export const routes:Array<RouteConfig> = [
         path: '/first',
         name: 'First',
         component: () =>
-          import(/* webpackChunkName: "pages" */ '../views/index/first.vue'),
+          import(/* webpackChunkName: "pages" */ '../views/EM4/first.vue'),
         meta: { index: 1 },
       },
       {
         path: '/second',
         name: 'Second',
         component: () =>
-          import(/* webpackChunkName: "pages" */ '../views/index/second.vue'),
+          import(/* webpackChunkName: "pages" */ '../views/EM4/second.vue'),
         meta: { index: 2 },
       },
       {
         path: '/thrid',
         name: 'Thrid',
         component: () =>
-          import(/* webpackChunkName: "pages" */ '../views/index/thrid.vue'),
+          import(/* webpackChunkName: "pages" */ '../views/EM4/thrid.vue'),
         meta: { index: 3 },
       },
       {
         path: '/fourth',
         name: 'Fourth',
         component: () =>
-          import(/* webpackChunkName: "pages" */ '../views/index/fourth.vue'),
+          import(/* webpackChunkName: "pages" */ '../views/EM4/fourth.vue'),
         meta: { index: 4 },
       },
     ]

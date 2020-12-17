@@ -23,6 +23,7 @@ html {
 
 #app {
   @extend .fullScreen;
+  overflow: hidden;
   user-select: none;
   article {
     @extend .fullScreen;

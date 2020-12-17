@@ -35,12 +35,13 @@ export default class Index extends Vue {
   private switchPage(type:'-' | '+' = '+'):void {
     this.currentPage += type === '-' ? -1 : 1
     const path = this.NAV_ITEMS.find((item:{ id:number, path:string }) => item.id === this.currentPage)?.path
-    path && path !== this.$route.path  && this.$router.replace(path)
+    path && path !== this.$route.path && this.$router.replace(path)
   }
 
   // 判断路由组件 index 值，动态改变过渡动画方向
   @Watch('$route')
   private watchRoute(to:Route, from:Route) {
+    this.currentPage = to.meta.index
     this.transitionName = `slide-${
       to.meta.index > from.meta.index
         ? 'top'
@@ -61,6 +62,7 @@ export default class Index extends Vue {
 <style lang="scss" scoped>
 .index {
   background: #fff;
+  box-shadow: 0 0 15vw burlywood inset;
   .pre-page, .next-page {
     position: fixed;
     left: 48vw;
@@ -79,6 +81,7 @@ export default class Index extends Vue {
     transform: rotate(-90deg);
     &._hidden {
       opacity: 0;
+      cursor: auto;
       transform: rotate(-90deg) translate(-10vh);
     }
   }
@@ -87,6 +90,7 @@ export default class Index extends Vue {
     transform: rotate(90deg);
     &._hidden {
       opacity: 0;
+      cursor: auto;
       transform: rotate(90deg) translate(-10vh);
     }
   }

@@ -1,10 +1,10 @@
 <template>
   <article class="first">
     <img src="images/ajax.png" @click="show = !show">
+    <p class="job" :class="{ show }">a web front-end programmer</p>
     <p class="full-name" :class="{ show }">
-      Asynchronous <span>JavaScript</span> And XML
+      Asynchronous <span class="js" @click="$router.replace('/second')">JavaScript</span> And XML
     </p>
-    <p class="job" :class="{ show }">web front-end programmer</p>
   </article>
 </template>
 
@@ -35,28 +35,31 @@ export default class First extends Vue {
       weight: bold;
       style: italic;
     }
-    color: $xkb-primary;
     word-spacing: 1vw;
     opacity: 0;
     transition: all .6s;
-    &.full-name {
-      top: calc(50vh - 18vw);
+    &.job {
+      top: calc(50vh - 15vw);
+      color: $redux-color;
       filter: hue-rotate(720deg);
-      transform: translate(10vw) rotate(10deg);
-      span {
+      transform: translateX(15vw) rotate(15deg);
+    }
+    &.full-name {
+      top: calc(50vh + 10vw);
+      color: $xkb-primary;
+      filter: hue-rotate(720deg);
+      transform: translate(-15vw) rotate(15deg);
+      .js {
         font-size: 4vw;
         color: $vue-color;
+        text-decoration: underline;
+        cursor: pointer;
       }
-    }
-    &.job {
-      top: calc(50vh + 12vw);
-      filter: hue-rotate(180deg);
-      transform: translateX(-10vw) rotate(10deg);
     }
     &.show {
       opacity: 1;
       filter: hue-rotate(0);
-      transform: translateX(0);
+      transform: translateX(0) rotate(0);
     }
   }
 }
