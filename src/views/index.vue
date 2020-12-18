@@ -28,7 +28,7 @@ export default class Index extends Vue {
   private readonly NAV_ITEMS:Array<{ id:number, path:string }> = [
     { id: 1, path: '/first' },
     { id: 2, path: '/second' },
-    { id: 3, path: '/thrid' },
+    { id: 3, path: '/third' },
     { id: 4, path: '/fourth' },
   ]
 

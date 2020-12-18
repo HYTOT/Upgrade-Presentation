@@ -1,9 +1,38 @@
 <template>
   <article class="second">
     <img class="evan" @click="show = !show" src="images/evan.jpg">
-    <img class="vue" :class="{ show }" src="images/progressive.png">
-    <section class="info">
-      <p class="name"><i class="iconfont icon-jiaoyudaka"></i>Evan You</p>
+    <img class="vue" :class="{ 'show': show && loaded }" src="images/progressive.png">
+    <aside class="info" :class="{ 'show': show && loaded }">
+      <div class="_row">
+        <i class="iconfont icon-jiaoyudaka"></i>Evan You / 尤雨溪
+      </div>
+      <div class="_row">
+        <i class="iconfont icon-dingwei1"></i>Wuxi, China
+      </div>
+      <div class="_row">
+        <i class="iconfont icon-xueshi"></i>High school (Shanghai, China)
+        <br>👉 Higher degrees (US)
+      </div>
+    </aside>
+    <img class="childhood" src="images/childhood.jpg">
+    <section class="beginning" :class="{ 'show': !show }">
+      <div class="_row">beginning:</div>
+      <div class="_row">
+        <i class="iconfont icon-ziyuanldpi"></i>get into programming
+      </div>
+      <div class="_row">
+        <i class="iconfont icon-ziyuanldpi1"></i>be interested in playing games
+      </div>
+      <br><br>
+      <div class="_row">majored in:</div>
+      <div class="_row">
+        <i class="iconfont icon-xueshi"></i>art & art history
+      </div>
+      <div class="_row">
+        <i class="iconfont icon-yiwenwenhaoduihuakuangjiedaxianxing"></i>but he realized that ...
+      </div>
+      <br><br>
+      <div class="_row _after" @click="$router.replace('/third')">afterwards 👉</div>
     </section>
   </article>
 </template>
@@ -14,10 +43,11 @@ import { Vue, Component } from 'vue-property-decorator'
 @Component
 export default class Second extends Vue {
 
-  private show:boolean = false
+  private loaded:boolean = false
+  private show:boolean = true
 
   private created():void {
-    setTimeout(() => this.show = true, 1000)
+    setTimeout(() => this.loaded = true, 1500)
   }
 
 }
@@ -25,7 +55,9 @@ export default class Second extends Vue {
 
 <style lang="scss" scoped>
 .second {
-  img, .info {
+  font-style: italic;
+  word-spacing: .3vw;
+  img, .info, .beginning {
     position: absolute;
   }
   img {
@@ -50,18 +82,69 @@ export default class Second extends Vue {
     }
   }
   .info {
-    top: 25vw;
+    top: 5vw;
     left: 5vw;
-    width: 20vw;
-    padding: 1vw;
-    font-size: 2.5vw;
-    i {
-      font-size: 2.3vw;
-      margin: 0 1vw;
+    opacity: 0;
+    transition: all .6s;
+    &.show {
+      top: 27vw;
+      opacity: 1;
     }
-    .name {
-      @extend .flexCenter;
-      
+    ._row {
+      display: flex;
+      align-items: center;
+      padding: .5vw 0;
+      font-size: 2vw;
+      color: #218c74;
+      i {
+        margin: 0 1vw;
+        font-size: 2vw;
+        color: $xkb-primary;
+      }
+    }
+  }
+  .childhood {
+    bottom: 5vw;
+    right: 5vw;
+    z-index: 2;
+    width: 20vw;
+  }
+  .beginning {
+    opacity: 0;
+    transform: translateY(5vh);
+    transition: all .6s;
+    ._row {
+      display: flex;
+      align-items: center;
+      padding: .5vw 0;
+      font-size: 2.2vw;
+      color: brown;
+      i {
+        margin: 0 1vw;
+        font-size: 1.8vw;
+        &.icon-ziyuanldpi {
+          color: $xkb-fail;
+        }
+        &.icon-ziyuanldpi1 {
+          color: $xkb-success;
+        }
+        &.icon-xueshi {
+          font-size: 2.6vw;
+          color: $xkb-primary;
+        }
+        &.icon-yiwenwenhaoduihuakuangjiedaxianxing {
+          font-size: 2.5vw;
+          color: #34495e;
+        }
+      }
+      &._after {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    &.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }

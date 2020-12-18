@@ -21,6 +21,8 @@ export default class First extends Vue {
 
 <style lang="scss" scoped>
 .first {
+  font-style: italic;
+  word-spacing: 1vw;
   // 图片比例 3:2
   img {
     width: 30vw;
@@ -33,9 +35,7 @@ export default class First extends Vue {
     font: {
       size: 2.4vw;
       weight: bold;
-      style: italic;
     }
-    word-spacing: 1vw;
     opacity: 0;
     transition: all .6s;
     &.job {

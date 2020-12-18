@@ -27,10 +27,10 @@ export const routes:Array<RouteConfig> = [
         meta: { index: 2 },
       },
       {
-        path: '/thrid',
-        name: 'Thrid',
+        path: '/third',
+        name: 'Third',
         component: () =>
-          import(/* webpackChunkName: "pages" */ '../views/EM4/thrid.vue'),
+          import(/* webpackChunkName: "pages" */ '../views/EM4/third.vue'),
         meta: { index: 3 },
       },
       {
