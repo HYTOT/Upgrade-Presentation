@@ -30,6 +30,7 @@ export default class Index extends Vue {
     { id: 2, path: '/second' },
     { id: 3, path: '/third' },
     { id: 4, path: '/fourth' },
+    { id: 5, path: '/fifth' },
   ]
 
   private switchPage(type:'-' | '+' = '+'):void {
@@ -61,6 +62,7 @@ export default class Index extends Vue {
 
 <style lang="scss" scoped>
 .index {
+  font-style: italic;
   background: #fff;
   box-shadow: 0 0 15vw burlywood inset;
   .pre-page, .next-page {

@@ -40,6 +40,13 @@ export const routes:Array<RouteConfig> = [
           import(/* webpackChunkName: "pages" */ '../views/EM4/fourth.vue'),
         meta: { index: 4 },
       },
+      {
+        path: '/fifth',
+        name: 'Fifth',
+        component: () =>
+          import(/* webpackChunkName: "pages" */ '../views/EM4/fifth.vue'),
+        meta: { index: 5 },
+      },
     ]
   },
   {

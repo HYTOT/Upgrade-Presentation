@@ -55,7 +55,6 @@ export default class Second extends Vue {
 
 <style lang="scss" scoped>
 .second {
-  font-style: italic;
   word-spacing: .3vw;
   img, .info, .beginning {
     position: absolute;
@@ -94,11 +93,11 @@ export default class Second extends Vue {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2vw;
-      color: #218c74;
+      font-size: 2.2vw;
+      color: $vue-color;
       i {
         margin: 0 1vw;
-        font-size: 2vw;
+        font-size: 2.2vw;
         color: $xkb-primary;
       }
     }
@@ -138,6 +137,7 @@ export default class Second extends Vue {
         }
       }
       &._after {
+        color: #323230;
         text-decoration: underline;
         cursor: pointer;
       }
