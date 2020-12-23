@@ -132,11 +132,11 @@ export default class Second extends Vue {
         }
         &.icon-yiwenwenhaoduihuakuangjiedaxianxing {
           font-size: 2.3vw;
-          color: #34495e;
+          color: $typescript-color;
         }
       }
       &._after {
-        color: #323230;
+        color: $typescript-color;
         text-decoration: underline;
         cursor: pointer;
       }

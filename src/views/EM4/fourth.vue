@@ -46,7 +46,16 @@
       <div class="_row" @click="show = true">It becomes... 👉</div>
     </section>
     <img class="websites" :class="{ 'loaded': loaded && !show }" @click="loaded = false" src="images/websites.png">
-    <img class="both" :class="{ 'show': loaded && show }" @click="show = false" src="images/both.jpg">
+    <section class="both" :class="{ 'show': loaded && show }">
+      <div class="_row">most popular JavaScript frameworks</div>
+      <img @click="show = false" src="images/both.jpg">
+      <div class="_row">developers of them:</div>
+      <div class="_row">
+        <span>Google</span><span>Evan You</span><span>Facebook</span>
+      </div>
+      <br><br>
+      <div class="_row _summary" @click="show && $router.replace('/fifth')">All in all...</div>
+    </section>
   </article>
 </template>
 
@@ -127,7 +136,7 @@ export default class Fourth extends Vue {
       align-items: center;
       padding: .5vw 0;
       font-size: 2vw;
-      color: $vue-color;
+      color: brown;
       span {
         text-decoration: underline;
         cursor: pointer;
@@ -136,7 +145,7 @@ export default class Fourth extends Vue {
       i {
         margin: 0 1vw;
         font-size: 2.4vw;
-        color: $xkb-primary;
+        color: $vue-color;
       }
     }
   }
@@ -158,7 +167,7 @@ export default class Fourth extends Vue {
       align-items: center;
       padding: .5vw 0;
       font-size: 2vw;
-      color: $vue-color;
+      color: brown;
       span {
         text-decoration: underline;
         cursor: pointer;
@@ -167,7 +176,7 @@ export default class Fourth extends Vue {
       i {
         margin: 0 1vw;
         font-size: 2.4vw;
-        color: $xkb-primary;
+        color: $vue-color;
       }
     }
   }
@@ -183,16 +192,16 @@ export default class Fourth extends Vue {
     }
     ._row {
       font-size: 2.2vw;
-      color: $vue-color;
+      color: brown;
       cursor: pointer;
       text-decoration: underline;
     }
   }
   .websites {
     position: absolute;
-    z-index: 4;
+    z-index: 3;
     width: 30vw;
-    transform: translateY(5vh);
+    transform: translateY(15vw);
     opacity: 0;
     transition: all 1s;
     &.loaded {
@@ -202,16 +211,41 @@ export default class Fourth extends Vue {
     }
   }
   .both {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     width: 40vw;
-    transform: translateY(-5vh);
+    transform: translateY(-15vw);
     opacity: 0;
     transition: all 1s;
+    img {
+      width: 100%;
+      margin: 1vw 0;
+    }
+    ._row {
+      @extend .flexCenter;
+      width: 100%;
+      padding: .5vw 0;
+      font-size: 2.2vw;
+      color: brown;
+      &._summary {
+        text-decoration: underline;
+        color: $typescript-color;
+        cursor: pointer;
+      }
+      span {
+        flex: 1;
+        @extend .flexCenter;
+      }
+    }
     &.show {
       opacity: 1;
       transform: translateY(0);
-      cursor: pointer;
+      img {
+        cursor: pointer;
+      }
     }
   }
 }
