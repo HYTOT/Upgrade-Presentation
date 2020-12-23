@@ -46,7 +46,6 @@ export default class Third extends Vue {
 
 <style lang="scss" scoped>
 .third {
-  word-spacing: .3vw;
   background: #323230;
   transition: all 1s;
   &.loaded {
@@ -65,27 +64,27 @@ export default class Third extends Vue {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    width: 50vw;
-    height: 40vw;
-    padding: 3vw;
+    width: 45vw;
+    height: 33vw;
+    padding: 2vw;
     background: #323230;
-    border-radius: 3vw;
+    border-radius: 2vw;
     overflow: hidden;
     transition: all 1s;
     img {
-      width: 30vw;
+      width: 25vw;
       cursor: pointer;
     }
     ._reason {
-      font-size: 3vw;
+      font-size: 2.6vw;
       color: #f6e58d;
     }
     ._job {
-      font-size: 1.5vw;
+      font-size: 1.4vw;
       color: white;
       i {
         margin: 0 1vw;
-        font-size: 3vw;
+        font-size: 2.6vw;
         color: #ff7979;
       }
     }
@@ -95,8 +94,8 @@ export default class Third extends Vue {
     top: 5vw;
     right: 5vw;
     z-index: 2;
-    width: 30vw;
-    border-radius: 2vw;
+    width: 25vw;
+    border-radius: 1vw;
     opacity: 0;
     transition: all 1s;
     &.loaded {
@@ -111,29 +110,29 @@ export default class Third extends Vue {
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    top: 20vw;
+    top: 16vw;
     right: 10vw;
     z-index: 2;
     opacity: 0;
     transition: all 1s;
     &.loaded {
-      right: 3vw;
+      right: 2vw;
       opacity: 1;
     }
     ._row {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2.1vw;
+      font-size: 2vw;
       color: #e12e33;
       span {
         text-decoration: underline;
         cursor: pointer;
-        margin-left: 1vw;
+        margin-left: .8vw;
       }
       i {
         margin: 0 1vw;
-        font-size: 2.5vw;
+        font-size: 2.4vw;
         color: $xkb-primary;
       }
     }
@@ -147,7 +146,7 @@ export default class Third extends Vue {
     transform: scale(0);
     transition: all 1s;
     img {
-      width: 30vw;
+      width: 25vw;
     }
     &.show {
       opacity: 1;
@@ -158,7 +157,7 @@ export default class Third extends Vue {
     }
     ._row {
       padding: .5vw 0;
-      font-size: 2.2vw;
+      font-size: 2vw;
       &._angular {
         color: #e12e33;
       }
@@ -177,8 +176,8 @@ export default class Third extends Vue {
     bottom: 5vw;
     left: 5vw;
     z-index: 2;
-    width: 30vw;
-    border-radius: 2vw;
+    width: 25vw;
+    border-radius: 1vw;
     opacity: 0;
     transition: all 1s;
     &.show {

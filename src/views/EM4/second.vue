@@ -55,28 +55,27 @@ export default class Second extends Vue {
 
 <style lang="scss" scoped>
 .second {
-  word-spacing: .3vw;
   img, .info, .beginning {
     position: absolute;
   }
   img {
-    border-radius: 2vw;
+    border-radius: 1vw;
   }
   .evan {
     top: 5vw;
     left: 5vw;
     z-index: 2;
-    width: 20vw;
+    width: 16vw;
     cursor: pointer;
   }
   .vue {
     top: 5vw;
-    left: 0;
-    width: 60vw;
+    right: 45vw;
+    width: 50vw;
     opacity: 0;
     transition: all .6s;
     &.show {
-      left: 35vw;
+      right: 5vw;
       opacity: 1;
     }
   }
@@ -86,18 +85,18 @@ export default class Second extends Vue {
     opacity: 0;
     transition: all .6s;
     &.show {
-      top: 27vw;
+      top: 23vw;
       opacity: 1;
     }
     ._row {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2.2vw;
+      font-size: 2vw;
       color: $vue-color;
       i {
         margin: 0 1vw;
-        font-size: 2.2vw;
+        font-size: 2vw;
         color: $xkb-primary;
       }
     }
@@ -106,7 +105,7 @@ export default class Second extends Vue {
     bottom: 5vw;
     right: 5vw;
     z-index: 2;
-    width: 20vw;
+    width: 16vw;
   }
   .beginning {
     opacity: 0;
@@ -116,11 +115,11 @@ export default class Second extends Vue {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2.2vw;
+      font-size: 2vw;
       color: brown;
       i {
         margin: 0 1vw;
-        font-size: 1.8vw;
+        font-size: 1.6vw;
         &.icon-ziyuanldpi {
           color: $xkb-fail;
         }
@@ -128,11 +127,11 @@ export default class Second extends Vue {
           color: $xkb-success;
         }
         &.icon-xueshi {
-          font-size: 2.6vw;
+          font-size: 2.4vw;
           color: $xkb-primary;
         }
         &.icon-yiwenwenhaoduihuakuangjiedaxianxing {
-          font-size: 2.5vw;
+          font-size: 2.3vw;
           color: #34495e;
         }
       }
