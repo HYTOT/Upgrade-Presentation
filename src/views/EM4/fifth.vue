@@ -1,7 +1,7 @@
 <template>
   <article class="fifth">
     <section class="summary" :class="{ show }">
-      <div class="_row _top">I admire him a lot because his...</div>
+      <div class="_row _top">I admire Evan a lot because his...</div>
       <div class="_row _top">Braveness drives him ... , but he is always...</div>
       <div class="_row _top">He makes a great contribution to China...</div>
       <img @click="toFirstPage" src="images/summary.jpg">
