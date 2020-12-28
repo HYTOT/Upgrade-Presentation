@@ -24,31 +24,31 @@ export default class First extends Vue {
   word-spacing: 1vw;
   // 图片比例 3:2
   img {
-    width: 21vw;
+    width: 20vw;
     position: absolute;
     cursor: pointer;
   }
   p {
     position: absolute;
     font: {
-      size: 1.8vw;
+      size: 1.6vw;
       weight: bold;
     }
     opacity: 0;
     transition: all .6s;
     &.job {
-      top: calc(50vh - 11vw);
+      top: calc(50vh - 10vw);
       color: $redux-color;
       filter: hue-rotate(720deg);
       transform: translateX(13vw) rotate(15deg);
     }
     &.full-name {
-      top: calc(50vh + 7vw);
+      top: calc(50vh + 6vw);
       color: $xkb-primary;
       filter: hue-rotate(720deg);
       transform: translate(-13vw) rotate(15deg);
       .js {
-        font-size: 2.8vw;
+        font-size: 2.6vw;
         color: $vue-color;
         text-decoration: underline;
         cursor: pointer;

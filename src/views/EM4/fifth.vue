@@ -1,13 +1,11 @@
 <template>
   <article class="fifth">
     <section class="summary" :class="{ show }">
-      <div class="_row _top">I admire Evan a lot because his...</div>
-      <div class="_row _top">Braveness drives him ... , but he is always...</div>
-      <div class="_row _top">He makes a great contribution to China...</div>
+      <div class="_row _top">I admire Evan a lot because...</div>
+      <div class="_row _top">He makes a great contribution to...</div>
       <img @click="toFirstPage" src="images/summary.jpg">
-      <div class="_row _bottom">There are many websites to...</div>
+      <div class="_row _bottom">There are many websites to know...</div>
       <div class="_row _bottom">In addition to programming...</div>
-      <div class="_row _bottom">Such an inspiring story...</div>
     </section>
   </article>
 </template>
@@ -23,7 +21,7 @@ export default class Fifth extends Vue {
   declare $router: VueRouter
 
   private show:boolean = false
-  private navItems:Array<{ id:number, path:string }> = [
+  private routes:Array<{ id:number, path:string }> = [
     { id: 1, path: '/first' },
     { id: 2, path: '/second' },
     { id: 3, path: '/third' },
@@ -31,11 +29,10 @@ export default class Fifth extends Vue {
   ]
 
   private toFirstPage():void {
-    let i = 0
-    while (this.navItems.length) {
-      const item:{ id:number, path:string } = this.navItems.pop()
-      setTimeout(() => this.$router.replace(item.path), i++ * 500)
-    }
+    const routes = this.routes
+    routes.forEach((route:{ id:number, path:string }) => {
+      setTimeout(() => this.$router.replace(route.path), (routes.length - route.id) * 500)
+    })
   }
 
   private created():void {
@@ -48,24 +45,20 @@ export default class Fifth extends Vue {
 <style lang="scss" scoped>
 .fifth {
   .summary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: absolute;
-    width: 45vw;
+    width: 40vw;
     ._row {
-      @extend .flexCenter;
-      width: 100%;
       padding: .5vw 0;
-      font-size: 2vw;
-      color: $typescript-color;
+      font-size: 1.8vw;
+      color: $xkb-teacher;
       opacity: 0;
-      transition: all 1s linear;
+      transition: all 1.5s;
       &._top {
-        transform: translateX(5vw);
+        transform: translate(20vw, 10vw);
       }
       &._bottom {
-        transform: translate(-5vw);
+        text-align: right;
+        transform: translate(-20vw, -10vw);
       }
     }
     &.show {
@@ -75,7 +68,7 @@ export default class Fifth extends Vue {
           transform: translateX(0);
         }
         &._bottom {
-          transform: translate(0);
+          transform: translateX(0);
         }
       }
     }

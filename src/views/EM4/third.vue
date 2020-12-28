@@ -13,7 +13,7 @@
         Google Creative Lab<i class="iconfont icon-centericjob"></i>
       </div>
       <div class="_row">
-        get involved in <span @click="show = false">Angular</span>
+        to get involved in <span @click="show = false">Angular</span>
       </div>
     </aside>
     <section class="angular" :class="{ 'show': loaded && !show }">
@@ -23,10 +23,8 @@
     </section>
     <section class="vuejs" :class="{ 'show': loaded && show }">
       <img src="images/vue.jpg" @click="$router.replace('/fourth')">
-      <div class="_row _vue">imitated advanced features...</div>
-      <div class="_row _vue">combined with his particular ideas...</div>
-      <div class="_row _vue">more and more famous...</div>
-      <div class="_row _vue">to make it better...</div>
+      <div class="_row _vue">imitated & combined with...</div>
+      <div class="_row _vue">was becoming more and more famous...</div>
     </section>
     <img class="famous" :class="{ 'show': loaded && show }" src="images/famous.png">
   </article>
@@ -64,27 +62,26 @@ export default class Third extends Vue {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    width: 45vw;
-    height: 33vw;
-    padding: 2vw;
+    height: 30vw;
+    padding: 3vw;
     background: #323230;
     border-radius: 2vw;
     overflow: hidden;
     transition: all 1s;
     img {
-      width: 25vw;
+      width: 22vw;
       cursor: pointer;
     }
     ._reason {
-      font-size: 2.6vw;
+      font-size: 2.4vw;
       color: #f6e58d;
     }
     ._job {
-      font-size: 1.4vw;
+      font-size: 1.3vw;
       color: white;
       i {
         margin: 0 1vw;
-        font-size: 2.6vw;
+        font-size: 2.2vw;
         color: #ff7979;
       }
     }
@@ -94,7 +91,7 @@ export default class Third extends Vue {
     top: 5vw;
     right: 5vw;
     z-index: 2;
-    width: 25vw;
+    width: 24vw;
     border-radius: 1vw;
     opacity: 0;
     transition: all 1s;
@@ -110,7 +107,7 @@ export default class Third extends Vue {
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
-    top: 16vw;
+    top: 15vw;
     right: 10vw;
     z-index: 2;
     opacity: 0;
@@ -123,7 +120,7 @@ export default class Third extends Vue {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2vw;
+      font-size: 1.8vw;
       color: #e12e33;
       span {
         text-decoration: underline;
@@ -132,7 +129,7 @@ export default class Third extends Vue {
       }
       i {
         margin: 0 1vw;
-        font-size: 2.4vw;
+        font-size: 2.2vw;
         color: $xkb-primary;
       }
     }
@@ -146,7 +143,7 @@ export default class Third extends Vue {
     transform: scale(0);
     transition: all 1s;
     img {
-      width: 25vw;
+      width: 22vw;
     }
     &.show {
       opacity: 1;
@@ -157,7 +154,7 @@ export default class Third extends Vue {
     }
     ._row {
       padding: .5vw 0;
-      font-size: 2vw;
+      font-size: 1.8vw;
       &._angular {
         color: #e12e33;
       }
@@ -165,6 +162,7 @@ export default class Third extends Vue {
         color: $vue-color;
       }
       span {
+        font-weight: bold;
         text-decoration: underline;
         color: $vue-color;
         cursor: pointer;
@@ -176,7 +174,7 @@ export default class Third extends Vue {
     bottom: 5vw;
     left: 5vw;
     z-index: 2;
-    width: 25vw;
+    width: 24vw;
     border-radius: 1vw;
     opacity: 0;
     transition: all 1s;

@@ -21,7 +21,7 @@
         <i class="iconfont icon-ziyuanldpi"></i>get into programming
       </div>
       <div class="_row">
-        <i class="iconfont icon-ziyuanldpi1"></i>be interested in playing games
+        <i class="iconfont icon-ziyuanldpi1"></i>more interested in playing games
       </div>
       <br><br>
       <div class="_row">majored in:</div>
@@ -62,50 +62,50 @@ export default class Second extends Vue {
     border-radius: 1vw;
   }
   .evan {
-    top: 5vw;
-    left: 5vw;
+    top: 3vw;
+    left: 3vw;
     z-index: 2;
-    width: 16vw;
+    width: 14vw;
     cursor: pointer;
   }
   .vue {
-    top: 5vw;
-    right: 45vw;
-    width: 50vw;
+    top: 3vw;
+    right: 50vw;
+    height: 14vw;
     opacity: 0;
     transition: all .6s;
     &.show {
-      right: 5vw;
+      right: 3vw;
       opacity: 1;
     }
   }
   .info {
-    top: 5vw;
-    left: 5vw;
+    top: 3vw;
+    left: 3vw;
     opacity: 0;
     transition: all .6s;
     &.show {
-      top: 23vw;
+      top: 20vw;
       opacity: 1;
     }
     ._row {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2vw;
+      font-size: 1.8vw;
       color: $vue-color;
       i {
         margin: 0 1vw;
-        font-size: 2vw;
+        font-size: 1.8vw;
         color: $xkb-primary;
       }
     }
   }
   .childhood {
-    bottom: 5vw;
-    right: 5vw;
+    bottom: 3vw;
+    right: 3vw;
     z-index: 2;
-    width: 16vw;
+    width: 14vw;
   }
   .beginning {
     opacity: 0;
@@ -115,11 +115,11 @@ export default class Second extends Vue {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2vw;
-      color: brown;
+      font-size: 1.8vw;
+      color: $xkb-teacher;
       i {
         margin: 0 1vw;
-        font-size: 1.6vw;
+        font-size: 1.4vw;
         &.icon-ziyuanldpi {
           color: $xkb-fail;
         }
@@ -127,11 +127,11 @@ export default class Second extends Vue {
           color: $xkb-success;
         }
         &.icon-xueshi {
-          font-size: 2.4vw;
+          font-size: 2vw;
           color: $xkb-primary;
         }
         &.icon-yiwenwenhaoduihuakuangjiedaxianxing {
-          font-size: 2.3vw;
+          font-size: 1.9vw;
           color: $typescript-color;
         }
       }

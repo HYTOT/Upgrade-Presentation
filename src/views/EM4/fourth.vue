@@ -13,7 +13,7 @@
         an independent<br>software developer
       </div>
       <div class="_row">
-        <i class="iconfont icon-ziyuan1"></i>as the project leader
+        <i class="iconfont icon-ziyuan1"></i>the project leader
       </div>
       <br><br>
       <div class="_row">Vue is:</div>
@@ -27,20 +27,23 @@
     <aside class="chinese" :class="{ 'loaded': loaded && !show }">
       <div class="_row">Because:</div>
       <div class="_row">
-        he is a Chinese
+        he is a Chinese<br>undoubtedly,
         <i class="iconfont icon-wode"></i>
       </div>
       <div class="_row">
-        Chinese-friendly<br>official manuals
+        Chinese-friendly
         <i class="iconfont icon-Get-Content"></i>
       </div>
       <br><br>
       <div class="_row">Now:</div>
       <div class="_row">
-        a majority of companies
+        companies in China
         <i class="iconfont icon-qunti"></i>
       </div>
-      <div class="_row">including Baidu<i class="iconfont icon-qunti"></i></div>
+      <div class="_row">
+        including Baidu, Tencent
+        <i class="iconfont icon-qunti"></i>
+      </div>
     </aside>
     <section class="become" :class="{ 'loaded': loaded && !show }">
       <div class="_row" @click="show = true">It becomes... 👉</div>
@@ -54,7 +57,7 @@
         <span>Google</span><span>Evan You</span><span>Facebook</span>
       </div>
       <br><br>
-      <div class="_row _summary" @click="show && $router.replace('/fifth')">All in all...</div>
+      <div class="_row _summary" @click="show && $router.replace('/fifth')">All in all... 👉</div>
     </section>
   </article>
 </template>
@@ -109,7 +112,7 @@ export default class Fourth extends Vue {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2.2vw;
+      font-size: 2vw;
       color: white;
       text-shadow: .1vw -.1vw 1vw white;
       span {
@@ -135,8 +138,8 @@ export default class Fourth extends Vue {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2vw;
-      color: brown;
+      font-size: 1.8vw;
+      color: $xkb-primary;
       span {
         text-decoration: underline;
         cursor: pointer;
@@ -144,8 +147,8 @@ export default class Fourth extends Vue {
       }
       i {
         margin: 0 1vw;
-        font-size: 2.4vw;
-        color: $vue-color;
+        font-size: 2.2vw;
+        color: $typescript-color;
       }
     }
   }
@@ -166,8 +169,8 @@ export default class Fourth extends Vue {
       display: flex;
       align-items: center;
       padding: .5vw 0;
-      font-size: 2vw;
-      color: brown;
+      font-size: 1.8vw;
+      color: $xkb-teacher;
       span {
         text-decoration: underline;
         cursor: pointer;
@@ -175,8 +178,8 @@ export default class Fourth extends Vue {
       }
       i {
         margin: 0 1vw;
-        font-size: 2.4vw;
-        color: $vue-color;
+        font-size: 2.2vw;
+        color: $typescript-color;
       }
     }
   }
@@ -191,8 +194,8 @@ export default class Fourth extends Vue {
       opacity: 1;
     }
     ._row {
-      font-size: 2.2vw;
-      color: brown;
+      font-size: 2vw;
+      color: $redux-color;
       cursor: pointer;
       text-decoration: underline;
     }
@@ -200,7 +203,7 @@ export default class Fourth extends Vue {
   .websites {
     position: absolute;
     z-index: 3;
-    width: 30vw;
+    width: 25vw;
     transform: translateY(15vw);
     opacity: 0;
     transition: all 1s;
@@ -211,12 +214,9 @@ export default class Fourth extends Vue {
     }
   }
   .both {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: absolute;
     z-index: 4;
-    width: 40vw;
+    width: 34vw;
     transform: translateY(-15vw);
     opacity: 0;
     transition: all 1s;
@@ -228,11 +228,11 @@ export default class Fourth extends Vue {
       @extend .flexCenter;
       width: 100%;
       padding: .5vw 0;
-      font-size: 2.2vw;
-      color: brown;
+      font-size: 2vw;
+      color: $xkb-orange;
       &._summary {
         text-decoration: underline;
-        color: $typescript-color;
+        color: $redux-color;
         cursor: pointer;
       }
       span {

@@ -1,9 +1,9 @@
 <template>
   <article class="index">
     <i class="iconfont icon-angle-right pre-page" @click="switchPage('-')"
-      :class="{ '_hidden': currentPage <= NAV_ITEMS[0].id }"></i>
+      :class="{ '_hidden': currentPage <= ROUTES[0].id }"></i>
     <i class="iconfont icon-angle-right next-page" @click="switchPage('+')"
-      :class="{ '_hidden': currentPage >= NAV_ITEMS[NAV_ITEMS.length-1].id }"></i>
+      :class="{ '_hidden': currentPage >= ROUTES[ROUTES.length-1].id }"></i>
     <transition :name="transitionName">
       <router-view />
       <!-- <keep-alive>
@@ -25,7 +25,7 @@ export default class Index extends Vue {
   // 用于表示路由组件过渡动画的方向
   private transitionName:string = ''
   private currentPage:number = 0
-  private readonly NAV_ITEMS:Array<{ id:number, path:string }> = [
+  private readonly ROUTES:Array<{ id:number, path:string }> = [
     { id: 1, path: '/first' },
     { id: 2, path: '/second' },
     { id: 3, path: '/third' },
@@ -35,7 +35,7 @@ export default class Index extends Vue {
 
   private switchPage(type:'-' | '+' = '+'):void {
     this.currentPage += type === '-' ? -1 : 1
-    const path = this.NAV_ITEMS.find((item:{ id:number, path:string }) => item.id === this.currentPage)?.path
+    const path = this.ROUTES.find((route:{ id:number, path:string }) => route.id === this.currentPage)?.path
     path && path !== this.$route.path && this.$router.replace(path)
   }
 
